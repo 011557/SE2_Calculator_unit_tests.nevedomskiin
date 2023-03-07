@@ -10,13 +10,16 @@ namespace SE2_Calculator_unit_tests
     {
         public int Add(string numbers)
         {
-            if (numbers == "") return 0;
+            // comment 0 empty string check
+	    if (numbers == "") return 0;
             else
             {
                 string[] strArray = numbers.Split();
                 int a, b;
+		// comment parsing
                 Int32.TryParse(strArray[0], out a);
                 Int32.TryParse(strArray[1], out b);
+		// comment 2 sum
                 return a + b;
             }
         }
